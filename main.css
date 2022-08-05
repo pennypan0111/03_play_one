@@ -1,0 +1,847 @@
+@font-face {
+    font-family: BlackOpsOne-Regular;
+    src: url('./font/BlackOpsOne-Regular.ttf');
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+@media screen and (min-width:768px) {
+    body{
+        font-size: 1rem;
+    }
+}
+span.orange{
+    color: #E38A28;
+}
+span.blue{
+    color: #78B0B5;
+}
+
+/* 首頁主畫面 || main banner */
+.main-banner{
+    background: linear-gradient(to top, #33333333 1px, transparent 1px), linear-gradient(to right, #33333333 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+.main-banner-container{
+    position: relative;
+}
+.logo-imgbox{
+    width: 20%;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+.logo-imgbox-black{
+    display: block;
+}
+.logo-imgbox-white{
+    display: none;
+}
+.logo-imgbox img{
+    width: 100%;
+}
+.main-banner-bg-mb{
+    display: block;
+    width: 100%;
+    height: 500px;
+    background: url('./images/banner-mb.png') center center/cover no-repeat ;
+}
+.main-banner-bg-pc{
+    display: none;
+}
+.banner-pc-float{
+    display: none;
+}
+.main-banner-textbox{
+    width: 100%;
+    background-color: #333333;
+    position: relative;
+    text-align: center;
+    height: auto;
+    margin-top: -130px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.main-banner-textbox h2{
+    color: #fff;
+    font-size: 3.2rem;
+    line-height: 0.9;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: BlackOpsOne-Regular;
+}
+.main-banner-textbox p{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.main-banner-textbox-ul{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.main-banner-textbox-li{
+    text-align: center;
+}
+.main-banner-textbox-li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+}
+.main-banner-textbox-li a:hover::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7.5px 0 7.5px 13px;
+    border-color: transparent transparent transparent #E38A28;
+    position: absolute;
+    left: -15%;
+}
+.main-banner-textbox-li a:hover{
+    color: #E38A28;
+    background-color: #0000009c;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+.decorate-orange-mb{
+    width: 25%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: -28%;
+    right: 10%;
+    animation: decorate-orange 2s linear infinite alternate;
+}
+.decorate-orange-mb img{
+    width: 100%;
+}
+.decorate-yellow-mb{
+    width: 26%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    bottom: -5%;
+    left: 2%;
+    animation: decorate-yellow 1.5s linear infinite alternate;
+}
+.decorate-yellow-mb img{
+    width: 100%;
+}
+.decorate-small-pc{
+    display: none;
+}
+.decorate-big-pc{
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .logo-imgbox{
+        width: 6%;
+        position: absolute;
+        top: 8%;
+        left: 3%;
+    }
+    .logo-imgbox-black{
+        display: none;
+    }
+    .logo-imgbox-white{
+        display: block;
+    }
+    .main-banner-row{
+        display: flex;
+    }
+    .main-banner-bg-col{
+        width: 55%;
+        height: 100vh;
+        position: relative;
+    }
+    .main-banner-textbox-col{
+        width: 45%;
+        height: 100vh;
+        order: -1;
+        background-color: #333333;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    .main-banner-textbox{
+        background-color: transparent;
+        margin-top: 100px;
+        height: 55%;
+        padding: 0px;
+    }
+    .main-banner-bg-mb{
+        display: none;
+    }
+    .main-banner-bg-pc{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .main-banner-bg-pc img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        vertical-align:top;
+        position: absolute;
+    }
+    .main-banner-bg-pc .banner-pc-float{
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1/1;
+        top: 120px;
+        right: 0;
+        animation: girlfloat 3s linear infinite alternate;
+    }
+    .main-banner-textbox h2{
+        font-size: 7rem;
+        text-align: center;
+    }
+    .main-banner-textbox p{
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: bold;
+        padding-bottom: 40px;
+    }
+    .main-banner-textbox-ul{
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .main-banner-textbox-li{
+        padding-bottom: 30px;
+    }
+    .main-banner-textbox-li a{
+        font-size: 2rem;
+    }
+    .main-banner-textbox-li a:hover::before{
+        border-width: 15px 0 15px 26px;
+        left: -30%;
+    }
+    .decorate-orange-mb{
+        top: -50%;
+        right: 5%;
+    }
+    .decorate-yellow-mb{
+        width: calc(100% - 70%);
+        bottom: -50%;
+        left: 5%;
+    }
+    .decorate-small-pc{
+        display: block;
+        position: absolute;
+        width: 20%;
+        top: 280px;
+        left: 200px;
+    }
+    .decorate-small-pc img{
+        width: 100%;
+    }
+    .decorate-big-pc{
+        display: block;
+        position: absolute;
+        width: 43%;
+        bottom: 0px;
+        left: -140px;
+    }
+    .decorate-big-pc img{
+        width: 100%;
+    }
+}
+@keyframes decorate-yellow {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+@keyframes decorate-orange {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(25px);
+    }
+}
+@keyframes girlfloat {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(35px);
+    }
+}
+
+/* 選單列表 || nav bar */
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    box-shadow:  0 2px 5px 0 rgba(50,50,105,0.15), 0 1px 1px 0 rgba(0,0,0,0.05);
+    position: relative;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+}
+.navbar-icon{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar-icon i{
+    font-size: 2rem;
+}
+.navbar-items{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow:  0 2px 5px 0 rgba(50,50,105,0.15), 0 1px 1px 0 rgba(0,0,0,0.05);
+}
+.navbar-items{
+    list-style: none;
+    text-align: center;
+}
+.navbar-items li:nth-child(1) , .navbar-items li:nth-child(2){
+    padding-bottom: 20px;
+}
+.navbar-items a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.navFixed {
+    z-index: 10;          
+    position: fixed;      
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    min-width: 100%;
+    opacity: 0.94;
+    transition: 1s;   
+  }
+@media screen and (min-width:768px) {
+    .navbar{
+        display: none;
+    }
+}
+
+
+/* 遊玩模式 || play mode */
+.play-mode{
+    padding-top: 15%;
+    padding-bottom: 10vmin;
+    transition: 0.5s;
+}
+.play-mode-container{
+    margin:auto;
+}
+.play-mode-title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.play-mode-title h3{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.play-mode-title p{
+    font-size: 1.5rem;
+    color: #E38A28;
+}
+.play-mode-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.play-mode-card{
+    margin: 0 auto 50px;
+    width: 100%;
+}
+.play-mode-card-1{
+    transition: 1s;
+}
+.play-mode-card-2{
+    transition: 2.5s;
+}
+.play-mode-card-3{
+    transition: 3.5s;
+}
+.play-mode-card-imgbox{
+    width: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    background-color: antiquewhite;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 5px #333333a4;
+}
+.play-mode-card-imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10%;
+}
+.play-mode-card-textbox{
+    width: 65%;
+    margin: auto;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.play-mode-card-textbox h6{
+    width: 100%;
+    color: #fff;
+    margin: auto;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.play-mode-card-textbox p{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #E38A28;
+    word-break: keep-all;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.play-mode-card-textbox small{
+    line-height: 1.5;
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (min-width:768px){
+    .play-mode{
+        padding-top: 105px;
+        padding-bottom: 90px;
+    }
+    .play-mode-container{
+        width: 80%;
+    }
+    .play-mode-title{
+        margin-bottom: 80px;
+    }
+    .play-mode-title h3{
+        font-size: 3.4rem;
+        margin-bottom: 30px;
+    }
+    .play-mode-title p{
+        font-size: 2rem;
+    }
+    .play-mode-col{
+        width: 33.3333333%;
+    }
+    .play-mode-card-imgbox{
+        margin-bottom: 60px;
+    }
+    .play-mode-card-textbox{
+        width: 70%;
+    }
+    .play-mode-card-textbox h6, .play-mode-card-textbox p{
+        width: 100%;
+        text-align: center;
+    }
+    .play-mode-card-textbox h6{
+        width: 90%;
+    }
+    .play-mode-card-textbox small{
+        text-align: justify;
+        font-size: 1.4rem;
+    }
+}
+
+/* 多人&單人 || people member */
+.people-member{
+    background-color: #333333;
+    padding-top: 15%;
+    padding-bottom: 10vmin;
+}
+.people-member-imgbox-pc{
+    display: none;
+}
+.people-member-textbox{
+    color: #fff;
+    width: 70%;
+    height: auto;
+    padding-bottom: 100px;
+    margin: auto;
+}
+.people-member-textbox h2{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+    padding-bottom: 10px;
+}
+.player-imgbox-mb{
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.player-imgbox-mb img{
+    width: 100%;
+}
+.player-imgbox-pc{
+    display: none;
+}
+.many-player-mb-imgbox{
+    display: block;
+    width: 20%;
+    margin: auto;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.many-player-mb-imgbox img{
+    width: 100%;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.many-player-pc-imgbox{
+    display: none;
+}
+.player-pluse{
+    display: none;
+}
+.people-member-imgbox-mb{
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.people-member-imgbox-mb img{
+    width: 100%;
+    vertical-align: top;
+}
+.people-member-textbox p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+@media screen and (min-width:768px) {
+    .people-member{
+        padding-top: 200px;
+        padding-bottom: 90px;
+    }
+    .people-member-container{
+        width: 75%;
+        overflow: hidden;
+        margin: auto;
+    }
+    .people-member-train{
+        width: 200%;
+        display: flex;
+    }
+    .people-member-row{
+        display: flex;
+        width: 100%;
+        transform: translateX(0%);
+        transition: 0.5s;
+    }
+    .people-member-col-img{
+        width: 35%;
+        display: flex;
+        align-items: center;
+    }
+    .people-member-col-text{
+        width: 65%;
+        display: flex;
+        align-items: center;
+    }
+    .people-member-imgbox-pc{
+        display: block;
+        width: 100%;
+        transition: 1s;
+    }
+    .people-member-imgbox-pc img{
+        width: 100%;
+    }
+    .people-member-imgbox-mb{
+        display: none;
+    }
+    .people-member-textbox{
+        color: #fff;
+        width: 75%;
+        height: auto;
+        margin: auto;
+        padding-bottom: 0px;
+    }
+    .people-member-textbox h2{
+        font-size: 4em;
+        text-align: left;
+        line-height: 1.3;
+        padding-bottom: 10px;
+    }
+    .player-imgbox-mb{
+        display: none;
+    }
+    .player-imgbox-pc{
+        display: block;
+        padding-bottom: 20px;
+    }
+    .many-player-pc-imgbox{
+        display: block;
+        width: 30%;
+        margin-left: 0;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .many-player-pc-imgbox img{
+        width: 100%;
+        vertical-align: top;
+        margin-right: 10px;
+    }
+    .many-player-mb-imgbox{
+        display: none;
+    }
+    .player-pluse{
+        display: block;
+        cursor: pointer;
+    }
+    .player-pluse i{
+        font-size: 2rem;
+        line-height: 2;
+        padding-right: 10px;
+    }
+    .fa-user-plus:hover{
+        color: #E38A28;
+    }
+    .fa-user-minus:hover{
+        color: #78B0B5;
+    }
+    .people-member-textbox p{
+        font-size: 1.6rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    .people-member-slider-dots{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .people-member-slider-points{
+        width: 20px;
+        aspect-ratio: 1/1;
+        background-color: #fff;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .dot-default{
+        background-color: #E38A28;
+    }
+    .people-member-slider-points-active{
+        background-color: #E38A28;
+    }
+}
+
+/* 遊戲介紹 || game introduce */
+.games-introduce{
+    background: linear-gradient(to top, #33333333 1px, transparent 1px), linear-gradient(to right, #33333333 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding-top: 15%;
+    padding-bottom: 10vmin;
+}
+.games-introduce-title-textbox h3{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.games-introduce-title-textbox p{
+    font-size: 1.5rem;
+    color: #E38A28;
+}
+.games-introduce-imgbox{
+    width: 85%;
+    margin: auto;
+    padding-top: 15%;
+    padding-bottom: 15vmin;
+    animation: upDownActive 2s linear infinite alternate;
+}
+.games-introduce-imgbox img{
+    width: 100%;
+}
+.games-introduce-btn-group{
+    overflow: hidden;
+}
+.games-introduce-btn{
+    width: 90%;
+    margin-left: auto;
+    background-color: #78B0B5;
+    padding: 10px;
+    border-radius: 100px 0 0 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 8px #333333a4;
+    cursor: pointer;
+}
+.games-btn-1{
+    transition: 1s;
+}
+.games-btn-2{
+    transition: 2.5s;
+}
+.games-btn-3{
+    transition: 3.5s;
+}
+.games-introduce-btn-row{
+    display: flex;
+}
+.games-introduce-btn-col-1{
+    width: 25%;
+    margin: auto;
+}
+.games-introduce-btn-col-3{
+    width: 75%;
+}
+.games-introduce-btn-iconbox{
+    width: 70%;
+    margin: auto;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.games-introduce-btn-iconbox img{
+    width: 70%;
+}
+.games-introduce-btn-textbox h5{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.games-introduce-btn-textbox-mb-p{
+    color: #fff;
+    line-height: 1.3;
+}
+.games-introduce-btn-textbox-pc-p{
+    display: none;
+}
+.game-introduce-point, .btn-default{
+    width: 95%;
+    background-color: #E38A28;
+}
+.h5-blue{
+    color: #2D5D5E;
+}
+.h5-orange, .btn-default{
+    color: #663606;
+}
+
+@media screen and (min-width:768px){
+    .games-introduce{
+        padding-top: 105px;
+        padding-bottom: 90px;
+    }
+    .games-introduce-container{
+        width: 90%;
+        margin-left: auto;
+    }
+    .games-introduce-row{
+        display: flex;
+        justify-content: center;
+    }
+    .games-introduce-col{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .games-introduce-btn-group{
+        width: 100%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .games-introduce-btn{
+        padding: 20px;
+    }
+    .games-introduce-btn-col-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .games-introduce-btn-textbox h5{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .games-introduce-btn-textbox-mb-p{
+        display: none;
+    }
+    .games-introduce-btn-textbox-pc-p{
+        display: block;
+        color: #fff;
+        text-align: justify;
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+}
+
+@keyframes upDownActive {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+/* 頁尾 || footer */
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* 回到首頁按鈕 || backtop-btn */
+.backtop-btn{
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .backtop-btn{
+        display: block;
+        width: 135px;
+        position: fixed;
+        right: 2%;
+        bottom: 2%;
+        cursor: pointer;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .backtop-btn img{
+        width: 100%;
+        vertical-align: top;
+    }
+}
